@@ -1,0 +1,314 @@
+@font-face {
+  font-family: 'Cardo';
+  src: url('fonts/Cardo.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Assistant';
+  src: url('fonts/Assistant.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  background: white;
+  height: calc(100vh - 10px);
+  width: 100%;
+  font-family: 'Assistant';
+  font-size: 12px;
+  background: #F5FFFF;
+  color: #000;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-top: 24px;
+}
+
+.app {
+	display: flex;
+    flex-direction: column;
+	height: 100vh;
+}
+
+.name {
+	display: flex;
+    font-size: 40px;
+    color: #607178;
+    width: 100%;
+    flex-direction: row;
+	align-items: center;
+}
+
+.name .title {
+	width: auto;
+	font-family: 'Cardo';
+}
+
+.prays {
+    display: flex;
+    flex-direction: column;
+	position: relative;
+	direction: rtl;
+    max-width: 400px;
+	flex: 1;
+}
+
+.prays .content {
+	flex: 1;
+}
+
+.date, .parasha, .space {
+	flex: 1;
+}
+
+.separator {
+	margin: 0 8px;
+	font-size: 1.5rem;
+}
+
+.separator.gray {
+	height: 1px;
+    border-bottom: 1px solid #eeeeee;
+    margin: 5px 0;
+}
+
+.parasha {
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+	font-size: 30px;
+    color: #607178;
+	font-weight: bold;
+	align-items: center;
+	gap: 10px;
+}
+
+.content-wrapper {
+	display: flex;
+    justify-content: center;
+	margin: 20px;
+	align-items: center;
+	height: 100vh;
+}
+
+.sections {
+	justify-content: center;
+	margin: 20px;
+	display: flex;
+	height: fit-content;
+}
+
+.content {
+	position: relative;
+	direction: rtl;
+    padding: 20px;
+	padding-top: 0;
+    box-sizing: border-box;
+    width: 380px;
+	flex: 1;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+	box-shadow: 0px 2px 36px rgba(140, 172, 172, 0.4);
+	max-height: fit-content;
+	z-index: 3;
+	margin: 10px;
+	height: auto;
+}
+
+.content .times {
+	line-height: 2;
+}
+
+.content-title {
+	font-size: 20px;
+    text-align: center;
+    color: #5298a5;
+    border-bottom: 1px solid #C59A73;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-family: 'Cardo';
+}
+
+.footer {
+	width: calc(100% - 40px);
+	background: #8cb6b6;
+	padding: 20px;
+	z-index: 2;
+	color: #fff;
+	font-size: 24px;
+	text-align: left;
+	font-family: 'Assistant';
+	display: flex;
+    justify-content: space-between;
+}
+
+.version {
+	color: #8cb6b6;
+}
+
+.deco {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background-image: url('../img/deco.png');
+	width: 400px;
+	height: 236px;
+}
+
+.rocha {
+	display: flex;
+	align-items: center;
+}
+
+.rocha img {
+	margin-left: 15px;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+}
+
+#admin-messages {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  z-index: 999;
+}
+
+.times {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Assistant';
+	color: #000;
+	font-size: 20px;
+}
+
+.colored-row {
+	background-color: #f5f5f5;
+}
+
+.time {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.day-time {
+	display: flex;
+}
+
+.day-column {
+  margin-left: 8px;
+  min-width: 50px;
+}
+
+.time-entry {
+  margin-bottom: 10px;
+}
+.time-entry input,
+.time-entry select {
+  margin-left: 6px;
+}
+
+.send-whatsapp {
+	visibility: hidden;
+	display: none;
+}
+
+.shabat-times .times {
+	color: #fff;
+}
+
+.shabat-times .times .time {
+	gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+	z-index: 6;
+	width: 100%;
+	margin: 0;
+  }
+  
+  .content-wrapper {
+	flex-direction: column;
+	height: auto;
+  }
+  
+  .sections {
+	flex-direction: column;
+	margin: 0;
+	width: 100%;
+  }
+
+  .prays {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .content {
+    max-width: 100%;
+	font-size: 14px;
+	box-shadow: none;
+	border: 1px solid rgba(140, 172, 172, .4);
+	height: auto;
+	width: 100%;
+	margin: 10px 0;
+  }
+  
+  .times {
+	font-size: 14px;
+  }
+
+  .name {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 24px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0px 8px 11px rgba(0, 0, 0, .2);
+  }
+
+  .parasha {
+    font-size: 20px;
+    justify-content: flex-start;
+	margin-bottom: 10px;
+  }
+
+  .deco {
+    display: none;
+  }
+  
+  .footer {
+	position: relative;
+	font-size: 16px;
+	padding: 0;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .shabat-times {
+	margin: 10px;
+  }
+  
+  .rocha {
+	display: none;
+  }
+}
+

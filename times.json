@@ -1,0 +1,223 @@
+{
+  "weekday": {
+    "title": "תפילות יום חול",
+    "visible": true,
+    "items": [
+      {
+        "description": "שחרית מניין ראשון",
+        "time_type": "exact",
+        "time_value": "06:25",
+        "visible": true
+      },
+      {
+        "description": "שחרית מניין שני",
+        "time_type": "exact",
+        "time_value": "08:00",
+        "visible": true
+      },
+      {
+        "description": "מנחה",
+        "time_type": "exact",
+        "time_value": "18:15",
+        "visible": true
+      },
+      {
+        "description": "ערבית",
+        "time_type": "exact",
+        "time_value": "18:50",
+        "visible": true
+      },
+      {
+        "description": "ערבית",
+        "time_type": "exact",
+        "time_value": "21:00",
+        "visible": true
+      }
+    ]
+  },
+  "shabbat": {
+    "title": "תפילות יום כיפור",
+    "visible": true,
+    "items": [
+      {
+        "description": "מנחה ערב שבת",
+        "time_type": "exact",
+        "time_value": "18:10",
+        "visible": true
+      },
+      {
+        "description": "שחרית מניין ראשון",
+        "time_type": "exact",
+        "time_value": "06:30",
+        "visible": true
+      },
+      {
+        "description": "שחרית מניין שני",
+        "time_type": "exact",
+        "time_value": "08:15",
+        "visible": true
+      },
+      {
+        "description": "מנחה מניין ראשון",
+        "time_type": "exact",
+        "time_value": "13:20",
+        "visible": true
+      },
+      {
+        "description": "מנחה מניין שני",
+        "time_type": "exact",
+        "time_value": "17:45",
+        "visible": true
+      },
+      {
+        "description": "ערבית צאת שבת",
+        "time_type": "exact",
+        "time_value": "19:05",
+        "visible": true
+      },
+      {
+        "description": "לך אלי",
+        "time_type": "exact",
+        "time_value": "18:00",
+        "visible": true
+      },
+      {
+        "description": "שחרית",
+        "time_type": "exact",
+        "time_value": "05:40",
+        "visible": true
+      },
+      {
+        "description": "מנחה",
+        "time_type": "exact",
+        "time_value": "15:15",
+        "visible": true
+      },
+      {
+        "description": "נעילה",
+        "time_type": "exact",
+        "time_value": "17:40",
+        "visible": true
+      },
+      {
+        "description": "תקיעת שופר",
+        "time_type": "exact",
+        "time_value": "18:47",
+        "visible": true
+      },
+      {
+        "description": "צאת הצום",
+        "time_type": "exact",
+        "time_value": "19:02",
+        "visible": true
+      }
+    ]
+  },
+  "lesson": {
+    "title": "שיעורים",
+    "visible": true,
+    "items": [
+      {
+        "description": "כולל הלכתי",
+        "time_type": "exact",
+        "time_value": "08:15",
+        "day": "ראשון",
+        "visible": true
+      },
+      {
+        "description": "גמרא כיתות ז'-ח',ראשון-חמישי",
+        "time_type": "exact",
+        "time_value": "20:15",
+        "day": "",
+        "visible": true
+      },
+      {
+        "description": "לימוד גמרא עיונית לגברים",
+        "time_type": "exact",
+        "time_value": "21:15",
+        "day": "ראשון",
+        "visible": true
+      },
+      {
+        "description": "שיעור נשים עם טלאור",
+        "time_type": "exact",
+        "time_value": "20:30",
+        "day": "שני",
+        "visible": true
+      },
+      {
+        "description": "משפ' נח-חובת הלבבות + עזרא",
+        "time_type": "exact",
+        "time_value": "20:30",
+        "day": "שלישי",
+        "visible": true
+      },
+      {
+        "description": "שיעור פ\"ש",
+        "time_type": "exact",
+        "time_value": "08:45",
+        "day": "שישי",
+        "visible": true
+      },
+      {
+        "description": "פ\"ש לילדים לאחר מנחה",
+        "time_type": "exact",
+        "time_value": "13:35",
+        "day": "שישי",
+        "visible": true
+      },
+      {
+        "description": "לימוד אבות וילדים",
+        "time_type": "exact",
+        "time_value": "10:00",
+        "day": "שבת",
+        "visible": true
+      },
+      {
+        "description": "חק ליעקב לילדים",
+        "time_type": "exact",
+        "time_value": "13:35",
+        "day": "שבת",
+        "visible": true
+      },
+      {
+        "description": "נתיבות שלום",
+        "time_type": "exact",
+        "time_value": "13:35",
+        "day": "שבת",
+        "visible": true
+      },
+      {
+        "description": "עמוד שבועי",
+        "time_type": "exact",
+        "time_value": "13:35",
+        "day": "שבת",
+        "visible": true
+      },
+      {
+        "description": "שיעור נשים",
+        "time_type": "exact",
+        "time_value": "16:45",
+        "day": "שבת",
+        "visible": true
+      },
+      {
+        "description": "תהילים בגנ\"ש",
+        "time_type": "exact",
+        "time_value": "17:15",
+        "day": "שבת",
+        "visible": true
+      }
+    ]
+  },
+  "activity": {
+    "title": "פעילויות",
+    "visible": true,
+    "items": []
+  },
+  "shabbatTimes": {
+    "title": "זמני שבת",
+    "visible": true,
+    "items": []
+  }
+}

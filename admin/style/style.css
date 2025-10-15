@@ -1,0 +1,116 @@
+html, body {
+direction: rtl;
+  margin: 0;
+  padding: 0;
+  background: white;
+  height: calc(100vh - 10px);
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+body {
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-top: 24px;
+}
+
+.content {
+	margin: 20px auto;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin: 20px;
+}
+
+input[type="number"] {
+	max-width: 70px;
+}
+
+input[type="text"] {
+	max-width: 120px;
+}
+
+button {
+	border: 1px solid #d6d6d6;
+	border-radius: 5px;
+	background-color: #fff;
+	max-width: 120px;
+	padding: 3px 6px;
+	display: flex;
+	flex-direction: row;
+}
+
+button.add {
+	background-color: #7ecd2d;
+	color: #fff;
+}
+
+button.save {
+	background-color: #3678ac;
+	color: #fff;
+	font-size: 20px;
+}
+
+button img {
+	margin-left: 5px;
+}
+
+.time-entry {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.time-entry input,
+.time-entry select {
+  margin-left: 6px;
+}
+
+.time-entry.dragging {
+  opacity: 0.5;
+  background: #ddd;
+  border: 1px dashed #aaa;
+}
+
+.time-entry {
+  cursor: move;
+}
+
+.send-whatsapp {
+	width: 20px;
+	height: 20px;
+}
+
+.buttons {
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.drag-handle {
+  cursor: grab;
+  margin-left: 8px;
+  font-size: 18px;
+  display: inline-block;
+  user-select: none;
+}
+
+.drag-ghost {
+  opacity: 0.4;
+  background: #ccc;
+}
+
+.time-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}

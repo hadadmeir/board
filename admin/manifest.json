@@ -1,0 +1,23 @@
+{
+  "name": "אהבת ה' ניהול",
+  "short_name": "אהבת ה' ניהול",
+  "description": "לוחות זמנים לבית כנסת אהבת ה' ניהול",
+  "start_url": "./",
+  "display": "fullscreen",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "../img/logo_g.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../img/logo_g.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "dir": "rtl",
+  "lang": "he"
+}
