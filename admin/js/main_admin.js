@@ -97,18 +97,26 @@ function addRow(type, data = null) {
   row.appendChild(btnRemove);
 
   container.appendChild(row);
+}
 
-  Sortable.create(container, {
-    handle: ".drag-handle",
-    animation: 150,
-    ghostClass: "drag-ghost"
+// אתחול גרירה לכל הסקשנים
+function initSortables() {
+  types.forEach(type => {
+    const container = document.getElementById(typeToId(type));
+    if (!container || container.dataset.sortableInit) return; // למנוע אתחול כפול
+    Sortable.create(container, {
+      handle: ".drag-handle",
+      animation: 150,
+      ghostClass: "drag-ghost"
+    });
+    container.dataset.sortableInit = "true";
   });
 }
 
 // שמירה
-function saveTimes(){
+function saveTimes() {
   const data = {};
-  types.forEach(type=>{
+  types.forEach(type => {
     const container = document.getElementById(typeToId(type));
     const rows = container.querySelectorAll(".time-entry");
     const sectionCheckbox = document.querySelector(`.section-visible[data-type="${type}"]`);
@@ -117,32 +125,35 @@ function saveTimes(){
     data[type] = {
       visible: sectionCheckbox?.checked ?? true,
       title: sectionTitle?.value.trim() || "",
-      items:[]
+      items: []
     };
 
-    rows.forEach(row=>{
+    rows.forEach(row => {
       const desc = row.querySelector(".desc").value.trim();
       const timeType = row.querySelector(".time-type").value;
-      const timeVal = timeType==='exact'
+      const timeVal = timeType === 'exact'
         ? row.querySelector(".time-value-exact").value.trim()
         : row.querySelector(".time-value-relative").value.trim();
       const rowVisible = row.querySelector(".row-visible")?.checked ?? true;
-      if(desc && timeVal){
+      if (desc && timeVal) {
         const item = { description: desc, time_type: timeType, time_value: timeVal, visible: rowVisible };
-        if(type==='lesson') item.day = row.querySelector(".lesson-day").value;
+        if (type === 'lesson') item.day = row.querySelector(".lesson-day").value;
         data[type].items.push(item);
       }
     });
   });
 
-  fetch(prot+"//www.shokeda.co.il/board/ajax.php?method=save",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
+  fetch(prot + "//www.shokeda.co.il/board/ajax.php?method=save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
-  }).then(r=>r.json()).then(()=>{
-    alert("✅ הנתונים נשמרו!");
-    loadTimes();
-  }).catch(()=>alert("❌ שגיאה בשמירה"));
+  })
+    .then(r => r.json())
+    .then(() => {
+      alert("✅ הנתונים נשמרו!");
+      loadTimes();
+    })
+    .catch(() => alert("❌ שגיאה בשמירה"));
 }
 
 // טעינה
@@ -157,19 +168,29 @@ function loadTimes() {
         const sectionCheckbox = document.querySelector(`.section-visible[data-type="${type}"]`);
         const sectionTitle = document.querySelector(`.section-title[data-type="${type}"]`);
 
-        if(sectionCheckbox && data[type]?.visible !== undefined){
+        if (sectionCheckbox && data[type]?.visible !== undefined) {
           sectionCheckbox.checked = data[type].visible;
         }
-        if(sectionTitle && data[type]?.title){
+        if (sectionTitle && data[type]?.title) {
           sectionTitle.value = data[type].title;
         }
 
-        if(data[type]?.items) {
+        if (data[type]?.items) {
           data[type].items.forEach(entry => addRow(type, entry));
         }
+
+        // לאתחל גרירה אחרי יצירת השורות
+        Sortable.create(container, {
+          handle: ".drag-handle",
+          animation: 150,
+          ghostClass: "drag-ghost"
+        });
       });
     })
     .catch(() => console.warn("⚠️ לא ניתן לטעון נתונים שמורים"));
 }
 
-window.onload = loadTimes;
+window.onload = function () {
+  loadTimes();
+  initSortables();
+};
